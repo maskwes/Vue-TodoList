@@ -1,9 +1,7 @@
 <template>
     <div>
         <ul>
-           <TodoItem v-for="todo in todos" 
-           v-bind:todo="todo" 
-           v-on:remove-todo="removeTodo"></TodoItem>
+           <TodoItem v-for="(todo, i) of todos"  v-bind:todo="todo" v-bind:index="i" v-on:remove-todo="removeTodo"></TodoItem>
         </ul>
     </div>
 </template>
