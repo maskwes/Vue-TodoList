@@ -1,8 +1,9 @@
 <template>
     <form @submit.prevent="onSubmit">
         <input type="text" v-model="title">
-        <button type="submit">create</button>
+        <md-button type="submit" class="md-raised md-primary">Primary</md-button>
     </form>
+    
 </template>
 <script>
 export default {

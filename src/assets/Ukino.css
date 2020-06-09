@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,400,700|Montserrat:300,400,700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+  padding: 0 15px;
+}
+
+@media (min-width: 575.98px) {
+  .wrapper {
+    padding: 0 calc(50vw - 270px);
+  }
+}
+
+@media (min-width: 767.98px) {
+  .wrapper {
+    padding: 0 calc(50vw - 360px);
+  }
+}
+
+@media (min-width: 991.98px) {
+  .wrapper {
+    padding: 0 calc(50vw - 480px);
+  }
+}
+
+@media (min-width: 1199.98px) {
+  .wrapper {
+    padding: 0 calc(50vw - 590px);
+  }
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 0 -10px;
+  margin-bottom: 10px;
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+[class*="col-"] {
+  padding: 10px;
+  width: 100%;
+}
+
+@media all and (min-width: 768px) {
+  .col-12 {
+    width: 100%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-9 {
+    width: 74.97%;
+  }
+  .col-8 {
+    width: 66.64%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-5 {
+    width: 41.65%;
+  }
+  .col-4 {
+    width: 33.32%;
+  }
+  .col-3 {
+    width: 24.99%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-1 {
+    width: 8.33%;
+  }
+}
+
+.headers, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
+  font-family: Montserrat Alternates;
+  font-style: normal;
+}
+
+.h1-like {
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.h2-like {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.h3-like {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.h4-like {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.h5-like {
+  font-size: 18px;
+}
+
+.h6-like {
+  font-size: 16px;
+}
+
+@media (max-width: 960px) {
+  .h1-like {
+    font-size: calc(0.9375vw + 18px);
+  }
+  .h2-like {
+    font-size: calc(0.625vw + 20px);
+  }
+  .h3-like {
+    font-size: calc(0.9375vw + 15px);
+  }
+  .h4-like {
+    font-size: calc(0.625vw+14px);
+  }
+  .h5-like {
+    font-size: calc(0.3125vw + 15px);
+  }
+  .h6-like {
+    font-size: calc(0.3125vw + 12px);
+  }
+  p {
+    font-size: calc(0.625vw + 12px);
+  }
+}
+/*# sourceMappingURL=style.css.map */

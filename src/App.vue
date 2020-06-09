@@ -1,11 +1,10 @@
 <template>
-  <div id="app">
+  <div id="app" class="wrapper">
     <h1>Todo List</h1>
     <hr>
     <router-view/>
   </div>
 </template>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -16,3 +15,4 @@
   margin-top: 60px;
 }
 </style>
+
