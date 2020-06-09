@@ -4,11 +4,16 @@
     <router-link to="/">Home</router-link>
     <hr>
     <AddTodo @add-todo="addTodo"></AddTodo>
-    <select v-model="filter">
-      <option value="all">All</option>
-      <option value="completed">completed</option>
-      <option value="not-completed">not-completed</option>
-    </select>
+          <div class="md-layout-item"> 
+            <md-field>
+          <label for="movie">Movie</label>
+          <md-select v-model="filter" name="movie" id="movie">
+            <md-option value="all">All</md-option>
+            <md-option value="completed">Сompleted</md-option>
+            <md-option value="not-completed">Not completed</md-option>
+          </md-select>
+        </md-field>
+      </div>
     <hr>
     <Loader v-if="loading"></Loader>
     <Todolist 
@@ -19,6 +24,19 @@
     <p v-else>No todos!</p>
   </div>
 </template>
+<style>
+  .md-select-menu 
+  {
+    top:180px !important;
+    background: white;
+  }
+  .md-list-item
+  {
+    padding-bottom: 0px;
+  }
+</style>>
+
+
 
 <script>
 import Todolist from'@/components/Todo-list'
