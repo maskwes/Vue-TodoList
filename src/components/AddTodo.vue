@@ -33,19 +33,6 @@ export default {
     }
 }
 </script>
-  export default {
-    name: 'TextFields',
-    data: () => ({
-      initial: 'Initial Value',
-      type: null,
-      withLabel: null,
-      inline: null,
-      number: null,
-      textarea: null,
-      autogrow: null,
-      disabled: null
-    })
-  }
 <style scoped>
     form{
         display: flex;
