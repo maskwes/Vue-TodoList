@@ -1,12 +1,25 @@
 <template>
+
   <div>
-    <h2>List</h2>
-    <router-link to="/">Home</router-link>
+    <v-card
+    class="mx-auto"
+    
+  >
+    <v-img
+      class="white--text align-end"
+      height="200px"
+      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+    >
+      <v-card-title>Todo list</v-card-title>
+    </v-img>
+    <v-card-text class="text--primary">
+     <router-link to="/">Home</router-link>
     <hr>
     <AddTodo @add-todo="addTodo"></AddTodo>
           <div class="md-layout-item"> 
           <md-field>
           <label for="movie">Movie</label>
+
           <md-select v-model="filter" name="movie" id="movie">
             <md-option value="all">All</md-option>
             <md-option value="completed">Сompleted</md-option>
@@ -14,7 +27,10 @@
           </md-select>
         </md-field>
       </div>
-    <hr>
+      
+    </v-card-text>
+  </v-card>
+  <hr>
     <Loader v-if="loading"></Loader>
     <Todolist 
     v-else-if="filteredTodos.length"
@@ -46,10 +62,12 @@ import Loader from'@/components/Loader'
 export default {
   name: 'App',
   data(){
+        items: ['All', 'Сompleted', 'Not completed']
+
     return{
       todos:[],
       loading:true,
-      filter:'all'
+      filter:'all',
     }
   },
   mounted() {

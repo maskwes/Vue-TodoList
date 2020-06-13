@@ -6,9 +6,13 @@ import './assets/Ukino.css'
 Vue.config.productionTip = false
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
+import Vuetify from 'vuetify'
+import vuetify from './plugins/vuetify';
+Vue.use(Vuetify)
 
 Vue.use(VueMaterial)
 new Vue({
   router,
-  render: h => h(App),
+  vuetify,
+  render: h => h(App)
 }).$mount('#app')

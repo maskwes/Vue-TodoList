@@ -1,18 +1,11 @@
 <template>
     <form @submit.prevent="onSubmit">
-        
-    <md-field>
-      <label>Enter the task</label>
-      <md-input v-model="title"></md-input>
-    </md-field>
-         
-    <md-field>
-      <label>Enter the task</label>
-      <md-textarea v-model="text"></md-textarea>
-    </md-field>
-        <md-button type="submit" class="md-raised md-primary">Primary</md-button>
+    <div>
+        <v-text-field label="Enter the task" :rules="rules" hide-details="auto" v-model="title"></v-text-field>
+        <v-text-field label="Another input" v-model="text"></v-text-field>
+    </div>
+    <v-btn type="submit" large color="primary">Primary</v-btn>    
     </form>
-    
 </template>
 <script>
 export default {
@@ -41,9 +34,7 @@ export default {
 }
 </script>
 <style scoped>
-    form{
-        display: flex;
-    }
+
     .md-input{
         width:400px;
         border: 1px solid black;
