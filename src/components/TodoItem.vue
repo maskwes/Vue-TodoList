@@ -6,9 +6,8 @@
             <div class="md-title" v-bind:class="{done: todo.completed}">{{index+1+"."+todo.title | uppercase}}</div>
             </md-card-header>  
             <md-card-content>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                {{todo.text}}
             </md-card-content>
-
             <md-card-actions>
             <md-button  name="" id="" v-on:click="todo.completed=!todo.completed">Complited</md-button>
             <md-button v-on:click="$emit('remove-todo',todo.id)">Delete</md-button>

@@ -5,7 +5,7 @@
     <hr>
     <AddTodo @add-todo="addTodo"></AddTodo>
           <div class="md-layout-item"> 
-            <md-field>
+          <md-field>
           <label for="movie">Movie</label>
           <md-select v-model="filter" name="movie" id="movie">
             <md-option value="all">All</md-option>
