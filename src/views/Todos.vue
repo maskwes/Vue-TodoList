@@ -1,9 +1,7 @@
 <template>
-
   <div>
     <v-card
-    class="mx-auto"
-    
+    class="mx-auto"  
   >
     <v-img
       class="white--text align-end"
@@ -39,7 +37,7 @@
     </Todolist>
     <p v-else>No todos!</p>
   </div>
-</template>
+</template> 
 <style>
   .md-select-menu 
   {
@@ -58,6 +56,7 @@
 import Todolist from'@/components/Todo-list'
 import AddTodo from'@/components/AddTodo'
 import Loader from'@/components/Loader'
+
 
 export default {
   name: 'App',
@@ -113,7 +112,7 @@ export default {
   components: {
     Todolist,
     AddTodo,
-    Loader
+    Loader,
   }
 }
 </script>

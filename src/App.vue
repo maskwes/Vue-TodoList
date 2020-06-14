@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <AppHeader></AppHeader>
     <div id="app" class="wrapper">
 
     <hr>
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import AppHeader from'@/components/AppHeader'
 
 export default {
   name: 'App',
@@ -16,5 +18,10 @@ export default {
   data: () => ({
     //
   }),
+  components:{
+    AppHeader
+
+  }
 };
 </script>
+
