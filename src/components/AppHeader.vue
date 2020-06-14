@@ -1,44 +1,65 @@
 <template>
-
-    <v-app-bar 
-      absolute
-      color="indigo darken-2"
+  <div>
+    <v-app-bar
+      color="deep-purple accent-4"
+      dense
       dark
-      shrink-on-scroll
-      prominent
-      scroll-target="#scrolling-techniques"
-      dence:true
     >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-
+      <v-toolbar-title>Todo</v-toolbar-title>
       <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
-        <template v-slot:extension>
-        <v-tabs align-with-title>
-          <v-tab to="/">Home</v-tab>
-          <v-tab to="/todos">Todos</v-tab>
-          <v-tab>Tab 3</v-tab>
-        </v-tabs>
-      </template>
+        <v-toolbar-items>
+            <v-btn text v-for="(item,i) in menuItems"  :to="item.route">
+               <v-icon left v-html="item.icon"></v-icon>
+                {{item.title}}
+            </v-btn>
+        </v-toolbar-items>
     </v-app-bar>
+  </div>
 </template>
-<style>
-    .v-toolbar__content{
-        height: 0px !important;
-    }  
-    header{
-        height: auto !important;
+<script>
+export default {
+    computed:{
+        menuItems(){
+            return[
+                {
+                    icon:"visibility",
+                    title:"Список дел",
+                    route:"/Todos"
+                },
+                 {
+                    icon:"extension",
+                    title:"Карта событий",
+                    route:"/Celendar"
+                },
+                {
+                    icon:"account_circle",
+                    title:"Профиль",
+                    route:"/Profile"
+                },
+                {
+                    icon:"exit_to_app",
+                    title:"Выйти",
+                    route:"/LogOut"
+                },
+                {
+                    icon:"input",
+                    title:"Войти",
+                    route:"/Login"
+                },
+                {
+                    icon:"lock_open",
+                    title:"Зарегестрироваться",
+                    route:"/SignUp"
+                },
+            ]
+            
+        }
     }
+}
+</script>
+
+<style scoped>
+a:not(.md-button):hover{
+    text-decoration: underline;
+}
 </style>

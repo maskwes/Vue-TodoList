@@ -11,7 +11,6 @@
       <v-card-title>Todo list</v-card-title>
     </v-img>
     <v-card-text class="text--primary">
-     <router-link to="/">Home</router-link>
     <hr>
     <AddTodo @add-todo="addTodo"></AddTodo>
           <div class="md-layout-item"> 
